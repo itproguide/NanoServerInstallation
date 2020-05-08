@@ -1,0 +1,36 @@
+Installation of Nano Server
+1. Start Powershell:
+
+To start a PowerShell session, type powershell at a command prompt.
+2. Get Current IP:
+
+Get-NetIPConfiguration command retrieves the current network configuration, including network interfaces, IP addresses, and DNS servers.
+
+The Get-NetIPAddress command displays the current IP address configuration, including IPv4, IPv6, and IP addresses with which these addresses are associated.
+3. Get NIC interface details:
+
+The Get-NetIPInterface command shows information about an IP interface,
+
+Get-NetIPConfiguration -InterfaceIndex 9
+
+4. Set IP address to interface:
+
+To configure a server with a static IP address, use the New-NetIPAddress command. This sets a static IP address, a subnet mask, and a default gateway to an interface with an index value of7
+
+New-NetIPaddress -InterfaceIndex 2 -IPAddress 192.168.1.182 -PrefixLength 24 -DefaultGateway 192.168.1.1
+5. Set DNS address:
+
+To configure a server with a static IP address, use the New-NetIPAddress command. This sets a static IP address, a subnet mask, and a default gateway to an interface with an index value of7
+
+New-NetIPaddress -InterfaceIndex 2 -IPAddress 192.168.1.182 -PrefixLength 24 -DefaultGateway 192.168.1.1
+6. Set IP address to interface:
+
+To configure a DNS client server address with values of 192.168.1.180 and 192.168.1.1, type the following command:
+
+Set-DNSClientServerAddress –InterfaceIndex 2 -ServerAddresses 192.168.1.180, 192.168.1.1
+
+7. Manage Server core using Server configuration tool:
+
+Open Server Configuration Tool by typing in the sconfig.cmd command.
+
+
